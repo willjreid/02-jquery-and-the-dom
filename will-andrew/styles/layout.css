@@ -1,0 +1,42 @@
+body {
+  margin: 0 auto;
+}
+
+.site-header {
+  background-color: #ffe9ad;
+  padding: 2% 1%;
+}
+
+.heading-group-h1, #articles {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#articles {
+  width: 94%;
+}
+
+.main-nav ul{
+  opacity: 0;
+  height: 0;
+  /*display: none;*/
+  -webkit-transition: opacity 0s linear;
+       -moz-transition: opacity 0s linear;
+        -ms-transition: opacity 0s linear;
+         -o-transition: opacity 0s linear;
+            transition: opacity 0s linear;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
