@@ -63,14 +63,3 @@ h2 {
   margin: 10% 0 7%;
   line-height: 1.5;
 }
-
-input[type=checkbox], label {
-  position: absolute;
-  top: 1%;
-  right: 0.5%;
-  font-size: 3.5em;
-}
-
-input {
-  z-index: 100;
-}

@@ -17,14 +17,7 @@ body {
 }
 
 .main-nav ul{
-  opacity: 0;
-  height: 0;
-  /*display: none;*/
-  -webkit-transition: opacity 0s linear;
-       -moz-transition: opacity 0s linear;
-        -ms-transition: opacity 0s linear;
-         -o-transition: opacity 0s linear;
-            transition: opacity 0s linear;
+  display: none;
 }
 
 .clearfix:after {

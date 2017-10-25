@@ -20,7 +20,8 @@ Article.prototype.toHtml = function() {
   // COMMENTED: What is the benefit of cloning the article? (see the jQuery docs)
   // Cloning allows you to create a deep copy of a set of matched elements, including all descendant elements and text nodes. This way you avoid deleting the article from the original location while you use the framework to post a new article by calling on the key/value pairs of the new Article object.
 
-  let $newArticle = $('article.template').clone().removeClass('.template').addClass('.newArticle');
+  let $newArticle = $('article.template').clone();
+  $newArticle.removeClass('template');
   /* DONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
 
   if (!this.publishedOn) $newArticle.addClass('draft');
@@ -35,10 +36,10 @@ Article.prototype.toHtml = function() {
       5. publication date. */
 
 
-  $('.newArticle h1').text(this.title);
-  $('.newArticle a').text(this.author);
-  $('.newArticle a.href').attr(this.authorUrl);
-  $('.newArticle .article-body').html(this.body);
+  $newArticle.find('h1').text(this.title);
+  $newArticle.find('a').text(this.author);
+  $newArticle.find('a').attr('href', this.authorUrl);
+  $newArticle.find('.article-body').html(this.body);
   // REVIEWED: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
@@ -58,5 +59,4 @@ rawData.forEach(function(i){
 
 articles.forEach(function(index){
   $('#articles').append(index.toHtml());
-  $('.newArticle').removeClass('.newArticle');
 });
