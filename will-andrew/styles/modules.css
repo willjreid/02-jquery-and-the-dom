@@ -84,3 +84,7 @@ input[type=checkbox]:checked + ul {
     margin-bottom: 2%;
   }
 }
+
+.template {
+  display: none;
+}
