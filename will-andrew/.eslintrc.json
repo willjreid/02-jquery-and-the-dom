@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "indent": [ "error", 2 ],
+    "semi": ["error", "always"]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "module": true,
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true,
+    "browser": true
+  },
+  "globals": {},
+  "extends": [
+    "eslint:recommended"
+  ]
+}
